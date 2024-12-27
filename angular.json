@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-portfolio-angular": {
+    "myportfolio-ang": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/my-portfolio-angular",
+            "outputPath": "dist/myportfolio-ang",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -37,6 +37,8 @@
               }
             ],
             "styles": [
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -74,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "my-portfolio-angular:build:production"
+              "buildTarget": "myportfolio-ang:build:production"
             },
             "development": {
-              "buildTarget": "my-portfolio-angular:build:development"
+              "buildTarget": "myportfolio-ang:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,8 +106,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "bf11b62e-1fe4-47e7-ac94-b14273e955fb"
   }
 }
