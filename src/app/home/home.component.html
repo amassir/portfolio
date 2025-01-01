@@ -5,17 +5,17 @@
             <div class="text-center">
                 <h2>About Me</h2>
                 <img src="img1.png" alt="profile picture" width="256" height="236" class="rounded-circle">
-                <p>Actuellement étudiant en 3e année de licence MIAGE, je suis à la recherche d'un stage du 01/04/2025 au 31/08/2025 pour mettre en pratique mes compétences et acquérir de nouvelles connaissances. Passionné le développement, et doté d'un fort esprit d'équipe, je souhaite intégrer une équipe dynamique afin de contribuer activement à ses projets.</p>
+                <p>Currently a 3rd year MIAGE degree student, I am looking for an internship from 01/04/2025 to 31/08/2025 to put my skills into practice and acquire new knowledge. Passionate about development and data analysis, with a strong team spirit, I would like to join a dynamic team in order to actively contribute to its projects.</p>
             </div>
         </div>
         <!-- Featured Project -->
         <div class="col-lg shadow border m-1">
             <div class="text-center">
-                <h2>Featured Projects</h2>
+                <h2>Featured Project</h2>
                 <h4>{{featuredProject.name}}</h4>
             </div>
 
-            <img src="img2.png" alt="slide" style="display: block; width: 100%;">
+            <img src={{featuredProject.pictures[0]}} alt="slide" style="display: block; width: 100%;">
 
             <p class="mt-2">{{featuredProject.summary}}</p>
             <p>Visit the portfolio section to learn more!</p>

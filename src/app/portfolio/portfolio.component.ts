@@ -19,7 +19,7 @@ export class PortfolioComponent implements OnInit{
   typescript: boolean = false;
   javascript: Boolean = false;
   python: Boolean = false;
-  csharp: Boolean = false;
+  html: Boolean = false;
   java: Boolean = false;
   angular: boolean = false;
   nodejs: boolean = false;
@@ -46,26 +46,26 @@ export class PortfolioComponent implements OnInit{
     if (this.python) {
       filterTags.push(Tag.PYTHON);
     }
-    if (this.csharp) {
-        filterTags.push(Tag.CSHARP);
+    if (this.html) {
+        filterTags.push(Tag.HTML);
     }
     if (this.java) {
         filterTags.push(Tag.JAVA);
     }
     if (this.nodejs) {
-        filterTags.push(Tag.NODEJS);
+        filterTags.push(Tag.SQL);
     }
     if (this.aspnet) {
-        filterTags.push(Tag.ASPNET);
+        filterTags.push(Tag.PHP);
     }
     if (this.javascript) {
         filterTags.push(Tag.JAVASCRIPT);
     }
     if (this.react) {
-        filterTags.push(Tag.REACT);
+        filterTags.push(Tag.APIREST);
     }
 
-    if (this.python || this.csharp || this.java || this.angular || this.typescript || this.nodejs || this.aspnet || this.javascript || this.react) {
+    if (this.python || this.html || this.java || this.angular || this.typescript || this.nodejs || this.aspnet || this.javascript || this.react) {
       this.filtering = true;
     } else {
         this.filtering = false;
@@ -78,7 +78,7 @@ export class PortfolioComponent implements OnInit{
     this.typescript= false;
     this.javascript = false;
     this.python = false;
-    this.csharp = false;
+    this.html = false;
     this.java = false;
     this.angular = false;
     this.nodejs = false;
