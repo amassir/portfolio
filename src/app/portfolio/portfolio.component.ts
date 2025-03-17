@@ -18,13 +18,13 @@ export class PortfolioComponent implements OnInit{
   isCollapsed: boolean = true;
   typescript: boolean = false;
   javascript: Boolean = false;
-  python: Boolean = false;
+  sql: Boolean = false;
   html: Boolean = false;
   java: Boolean = false;
   angular: boolean = false;
   nodejs: boolean = false;
-  aspnet: boolean = false;
-  react: boolean = false;
+  php: boolean = false;
+  apirest: boolean = false;
   filtering: boolean = false;
 
   constructor(private titleService : Title, private projectService: ProjectsService){
@@ -43,8 +43,8 @@ export class PortfolioComponent implements OnInit{
     if (this.angular){
       filterTags.push(Tag.ANGULAR)
     }
-    if (this.python) {
-      filterTags.push(Tag.PYTHON);
+    if (this.sql) {
+      filterTags.push(Tag.SQL);
     }
     if (this.html) {
         filterTags.push(Tag.HTML);
@@ -53,19 +53,19 @@ export class PortfolioComponent implements OnInit{
         filterTags.push(Tag.JAVA);
     }
     if (this.nodejs) {
-        filterTags.push(Tag.SQL);
+        filterTags.push(Tag.Nodejs);
     }
-    if (this.aspnet) {
+    if (this.php) {
         filterTags.push(Tag.PHP);
     }
     if (this.javascript) {
         filterTags.push(Tag.JAVASCRIPT);
     }
-    if (this.react) {
+    if (this.apirest) {
         filterTags.push(Tag.APIREST);
     }
 
-    if (this.python || this.html || this.java || this.angular || this.typescript || this.nodejs || this.aspnet || this.javascript || this.react) {
+    if (this.sql || this.html || this.java || this.angular || this.typescript || this.nodejs || this.php || this.javascript || this.apirest) {
       this.filtering = true;
     } else {
         this.filtering = false;
@@ -77,13 +77,13 @@ export class PortfolioComponent implements OnInit{
   ResetFilters(){
     this.typescript= false;
     this.javascript = false;
-    this.python = false;
+    this.sql = false;
     this.html = false;
     this.java = false;
     this.angular = false;
     this.nodejs = false;
-    this.aspnet = false;
-    this.react = false;
+    this.php = false;
+    this.apirest = false;
     this.filtering = false;
 
     this.projects = this.projectService.GetProjects();

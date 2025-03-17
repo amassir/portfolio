@@ -24,6 +24,7 @@
     "bootstrap": "^5.2.3",
     "express": "^4.18.2",
     "ngx-bootstrap": "^19.0.1",
+    "portfolio-ang": "file:",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
