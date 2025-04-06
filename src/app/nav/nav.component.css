@@ -1,0 +1,35 @@
+.custom-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.25rem 0; /* ↓ hauteur réduite */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  }
+  
+  .nav-link {
+    color: #6c757d;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem; /* ↓ espace vertical réduit */
+    transition: color 0.3s, border-bottom 0.3s;
+    position: relative;
+  }
+  
+  .nav-link:hover {
+    color: #000;
+  }
+  
+  .nav-link.active {
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .nav-link.active::after,
+  .nav-link:hover::after {
+    content: '';
+    display: block;
+    width: 50%;
+    margin: auto;
+    border-bottom: 2px solid #000;
+    padding-top: 3px;
+  }
+  

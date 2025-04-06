@@ -11,8 +11,16 @@
 
     <h3 class="mt-2">Description</h3>
     <p>{{project.description}}</p>
-    <p>you can find this project at github <a href="{{project.projectLink}}" target="_blank">here</a></p>
-
+    <p>
+        You can find this project at GitHub
+        <a [href]="project.projectLink" target="_blank">here</a>.
+        <span *ngIf="project.id === 0">
+          <br>
+          And see the result live
+          <a href="https://appwebprojet.online/home" target="_blank">here</a>.
+        </span>
+      </p>
+      
     <hr>
     <div class="d-flex flex-wrap">
         <div *ngFor="let tag of project.tags">

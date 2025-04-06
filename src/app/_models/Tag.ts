@@ -8,6 +8,7 @@ export class Tag {
     static readonly PHP = new Tag('PHP', 'purple');
     static readonly JAVASCRIPT = new Tag('JavaScript', 'orange');
     static readonly APIREST = new Tag('API REST', 'blue');
+    static readonly PYTHON = new Tag('Python', 'teal');
 
 
     private constructor(private readonly key: string, public readonly color: string, ){
